@@ -1,5 +1,4 @@
 # Lip-Flip
-# Lip-Flip
 
 # 1. Introduction
 
@@ -9,7 +8,7 @@ Our project, 'Lip-Flip', aims to introduce a sophisticated technique that allows
 
 Our methodology is outlined in Figure 1, providing a visual summary of the process. The pipeline initiates with a calibration phase upon system startup, focusing on color and luminance adjustments. We calculate a transformation matrix to harmonize the visual attributes of images captured by different webcams. This matrix is consistently applied to all subsequent frames.
 
-![Figure 1: Processing Pipeline](https://prod-files-secure.s3.us-west-2.amazonaws.com/457b6f44-2eb6-4f4d-96ee-2e01af031202/4cc560dc-772f-4f75-95d4-a96684a2fdc0/Untitled.png)
+![Figure 1: Processing Pipeline](./Figure%201_%20Processing%20Pipeline.png)
 
 Figure 1: Processing Pipeline
 
@@ -70,19 +69,19 @@ This method is a color calibration technique that aligns the color profile of a 
 
 1. Keypoints and Descriptor Detection using ORB:
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/457b6f44-2eb6-4f4d-96ee-2e01af031202/faae8892-1576-4280-8aef-8fa9dff27dbd/Untitled.png)
+![Untitled](./image.png)
 
 1. All Matches:
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/457b6f44-2eb6-4f4d-96ee-2e01af031202/d65264b9-3b62-4c15-a9ce-ccb11b2789dc/Untitled.png)
+![Untitled](./all_matches.png)
 
 1. Good Matches:
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/457b6f44-2eb6-4f4d-96ee-2e01af031202/1a6eeea5-3c03-40c9-9dfb-4b4927d5cd6d/Untitled.png)
+![Untitled](./good_matches.png)
 
 1. Final Results of color calibration
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/457b6f44-2eb6-4f4d-96ee-2e01af031202/67a6daa2-8580-4574-8705-ce24ae3756ab/Untitled.png)
+![Untitled](./final_colour_calibration.png)
 
 ### 3.1.6 More on the concepts used:
 
@@ -139,7 +138,7 @@ This method takes an image (**`img`**) and a mouth region (**`mouth`**) as input
 2. Create an empty black image (mask) of the same size as the original image.
 3. Draw a filled white ellipse on the mask, representing the shape of the mouth region.
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/457b6f44-2eb6-4f4d-96ee-2e01af031202/db42be40-49ad-4725-8d66-503b4838da92/Untitled.png)
+![Untitled](./lip_detection.png)
 
 # 5. Laplacian Pyramid Blending
 
@@ -155,7 +154,7 @@ After locating the mouths in both faces, the subsequent steps include scaling an
     
 4. **Obtain the final combined image C** by collapsing the combined Laplacian pyramid LC, upsampling the image at each scale and adding them together.
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/457b6f44-2eb6-4f4d-96ee-2e01af031202/9d4c57ae-857f-4598-9b5b-43a6dbcc06a6/Untitled.png)
+![Untitled](./output.png)
 
 # 6. Final
 
